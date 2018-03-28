@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# 
+# Start of session at: Mon Oct 24 20:08:45 2016
+# Process ID: 6624
+# Current directory: E:/AX7010/labs/helloworld/helloworld.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: E:/AX7010/labs/helloworld/helloworld.sdk/webtalk/webtalk.log
+# Journal file: E:/AX7010/labs/helloworld/helloworld.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

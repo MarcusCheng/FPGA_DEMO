@@ -1,0 +1,454 @@
+14:28:49 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+14:28:51 INFO  : XSDB server has started successfully.
+14:28:51 INFO  : Processing command line option -hwspec E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper.hdf.
+14:35:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:35:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210249854655" && level==0} -index 1' command is executed.
+14:35:16 INFO  : FPGA configured successfully with bitstream "E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+14:35:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210249854655" && level==0} -index 1' command is executed.
+14:35:26 INFO  : 'fpga -state' command is executed.
+14:35:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:35:26 INFO  : Sourcing of 'E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:35:26 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0' command is executed.
+14:35:26 INFO  : Hardware design information is loaded from 'E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper_hw_platform_0/system.hdf'.
+14:35:27 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0' command is executed.
+14:35:27 INFO  : 'stop' command is executed.
+14:35:27 INFO  : 'ps7_init' command is executed.
+14:35:27 INFO  : 'ps7_post_config' command is executed.
+14:35:28 INFO  : 'con' command is executed.
+14:35:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:35:28 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+14:35:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:35:32 INFO  : The application 'E:/AX7010/labs/vdma_test/vdma_test.sdk/vdma_test/Debug/vdma_test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:35:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+loadhw E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+dow E:/AX7010/labs/vdma_test/vdma_test.sdk/vdma_test/Debug/vdma_test.elf
+----------------End of Script----------------
+
+14:35:32 INFO  : Memory regions updated for context APU
+14:35:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:35:32 INFO  : 'con' command is executed.
+14:35:32 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+con
+----------------End of Script----------------
+
+14:36:08 INFO  : Disconnected from the channel tcfchan#1.
+14:36:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210249854655" && level==0} -index 1' command is executed.
+14:36:08 INFO  : 'fpga -state' command is executed.
+14:36:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:36:08 INFO  : Sourcing of 'E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:36:09 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0' command is executed.
+14:36:09 INFO  : Hardware design information is loaded from 'E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper_hw_platform_0/system.hdf'.
+14:36:09 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0' command is executed.
+14:36:09 INFO  : 'stop' command is executed.
+14:36:10 INFO  : 'ps7_init' command is executed.
+14:36:10 INFO  : 'ps7_post_config' command is executed.
+14:36:10 INFO  : 'con' command is executed.
+14:36:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:36:10 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+14:36:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:36:15 INFO  : The application 'E:/AX7010/labs/vdma_test/vdma_test.sdk/vdma_test/Debug/vdma_test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:36:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+loadhw E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+dow E:/AX7010/labs/vdma_test/vdma_test.sdk/vdma_test/Debug/vdma_test.elf
+----------------End of Script----------------
+
+14:36:15 INFO  : Memory regions updated for context APU
+14:36:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:36:15 INFO  : 'con' command is executed.
+14:36:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+con
+----------------End of Script----------------
+
+14:36:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:36:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210249854655" && level==0} -index 1' command is executed.
+14:36:47 INFO  : FPGA configured successfully with bitstream "E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+14:36:58 INFO  : Disconnected from the channel tcfchan#2.
+14:36:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210249854655" && level==0} -index 1' command is executed.
+14:36:59 INFO  : 'fpga -state' command is executed.
+14:36:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:36:59 INFO  : Sourcing of 'E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:37:00 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0' command is executed.
+14:37:00 INFO  : Hardware design information is loaded from 'E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper_hw_platform_0/system.hdf'.
+14:37:00 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0' command is executed.
+14:37:00 INFO  : 'stop' command is executed.
+14:37:00 INFO  : 'ps7_init' command is executed.
+14:37:00 INFO  : 'ps7_post_config' command is executed.
+14:37:01 INFO  : 'con' command is executed.
+14:37:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:37:01 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+14:37:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:37:05 INFO  : The application 'E:/AX7010/labs/vdma_test/vdma_test.sdk/vdma_test/Debug/vdma_test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:37:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+loadhw E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+dow E:/AX7010/labs/vdma_test/vdma_test.sdk/vdma_test/Debug/vdma_test.elf
+----------------End of Script----------------
+
+14:37:05 INFO  : Memory regions updated for context APU
+14:37:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:37:05 INFO  : 'con' command is executed.
+14:37:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+con
+----------------End of Script----------------
+
+14:37:40 INFO  : Disconnected from the channel tcfchan#3.
+14:37:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210249854655" && level==0} -index 1' command is executed.
+14:37:40 INFO  : 'fpga -state' command is executed.
+14:37:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:37:41 INFO  : Sourcing of 'E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:37:41 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0' command is executed.
+14:37:41 INFO  : Hardware design information is loaded from 'E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper_hw_platform_0/system.hdf'.
+14:37:41 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0' command is executed.
+14:37:41 INFO  : 'stop' command is executed.
+14:37:42 INFO  : 'ps7_init' command is executed.
+14:37:42 INFO  : 'ps7_post_config' command is executed.
+14:37:42 INFO  : 'con' command is executed.
+14:37:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:37:42 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+14:37:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:37:47 INFO  : The application 'E:/AX7010/labs/vdma_test/vdma_test.sdk/vdma_test/Debug/vdma_test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:37:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+loadhw E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+dow E:/AX7010/labs/vdma_test/vdma_test.sdk/vdma_test/Debug/vdma_test.elf
+----------------End of Script----------------
+
+14:37:47 INFO  : Memory regions updated for context APU
+14:37:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:37:47 INFO  : 'con' command is executed.
+14:37:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+con
+----------------End of Script----------------
+
+14:38:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:38:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210249854655" && level==0} -index 1' command is executed.
+14:38:08 INFO  : FPGA configured successfully with bitstream "E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+14:38:19 INFO  : Disconnected from the channel tcfchan#4.
+14:38:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210249854655" && level==0} -index 1' command is executed.
+14:38:19 INFO  : 'fpga -state' command is executed.
+14:38:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:38:20 INFO  : Sourcing of 'E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:38:20 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0' command is executed.
+14:38:20 INFO  : Hardware design information is loaded from 'E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper_hw_platform_0/system.hdf'.
+14:38:21 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0' command is executed.
+14:38:21 INFO  : 'stop' command is executed.
+14:38:21 INFO  : 'ps7_init' command is executed.
+14:38:22 INFO  : 'ps7_post_config' command is executed.
+14:38:22 INFO  : 'con' command is executed.
+14:38:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:38:22 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+14:38:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:38:26 INFO  : The application 'E:/AX7010/labs/vdma_test/vdma_test.sdk/vdma_test/Debug/vdma_test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:38:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+loadhw E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+dow E:/AX7010/labs/vdma_test/vdma_test.sdk/vdma_test/Debug/vdma_test.elf
+----------------End of Script----------------
+
+14:38:26 INFO  : Memory regions updated for context APU
+14:38:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:38:27 INFO  : 'con' command is executed.
+14:38:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+con
+----------------End of Script----------------
+
+09:29:15 WARN  : Unexpected exception occurred.
+java.io.IOException: Command [C 408 xsdb eval "disconnect tcfchan#5"] aborted
+	at org.eclipse.tcf.core.AbstractChannel$9.run(AbstractChannel.java:753)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:209)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.tcf.core.ChannelTCP.get(ChannelTCP.java:162)
+	at org.eclipse.tcf.core.StreamChannel.read(StreamChannel.java:84)
+	at org.eclipse.tcf.core.AbstractChannel$1.run(AbstractChannel.java:254)
+09:34:43 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+09:34:46 INFO  : XSDB server has started successfully.
+09:34:47 INFO  : Processing command line option -hwspec E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper.hdf.
+09:34:47 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_0.
+09:40:35 INFO  : Invoking Bootgen: bootgen -image output.bif -o E:\AX7010\labs\vdma_test\BOOT.bin
+09:40:35 INFO  : Creating new bif file E:\AX7010\labs\vdma_test\output.bif
+09:40:36 INFO  : Bootgen command execution is done.
+10:00:00 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+10:00:02 INFO  : XSDB server has started successfully.
+10:00:02 INFO  : Processing command line option -hwspec E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper.hdf.
+10:00:03 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_0.
+10:00:47 INFO  : Invoking Bootgen: bootgen -image vdma_test.bif -o E:\AX7010\labs\vdma_test\vdma_test.sdk\vdma_test\bootimage\BOOT.bin
+10:00:47 INFO  : Creating new bif file E:\AX7010\labs\vdma_test\vdma_test.sdk\vdma_test\bootimage\vdma_test.bif
+10:00:48 INFO  : Bootgen command execution is done.
+10:06:19 INFO  : Invoking Bootgen: bootgen -image fsbl.bif -o E:\AX7010\labs\vdma_test\vdma_test.sdk\fsbl\bootimage\BOOT.bin
+10:06:19 INFO  : Creating new bif file E:\AX7010\labs\vdma_test\vdma_test.sdk\fsbl\bootimage\fsbl.bif
+10:06:20 INFO  : Bootgen command execution is done.
+10:12:04 INFO  : Invoking Bootgen: bootgen -image fsbl.bif -o E:\AX7010\labs\vdma_test\vdma_test.sdk\fsbl\bootimage\BOOT.bin -w on
+10:12:04 INFO  : Bootgen command execution is done.
+10:55:00 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+10:55:02 INFO  : XSDB server has started successfully.
+10:55:06 INFO  : Processing command line option -hwspec E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper.hdf.
+10:55:07 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_0.
+10:55:07 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1477623076653,  Project:1477548766893
+10:55:07 INFO  : The hardware specification for project 'system_wrapper_hw_platform_0' is different from E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper.hdf.
+10:55:07 INFO  : Copied contents of E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper.hdf into \system_wrapper_hw_platform_0\system.hdf.
+10:55:10 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+10:55:17 INFO  : 
+10:55:18 INFO  : 
+10:55:19 INFO  : Updating hardware inferred compiler options for fsbl.
+10:55:20 INFO  : Updating hardware inferred compiler options for vdma_test.
+10:55:20 INFO  : Clearing existing target manager status.
+10:56:30 INFO  : Invoking Bootgen: bootgen -image output.bif -o E:\AX7010\labs\vdma_test\BOOT.bin -w on
+10:56:31 INFO  : Bootgen command execution is done.
+11:07:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210249854655" && level==0} -index 1' command is executed.
+11:07:16 INFO  : 'fpga -state' command is executed.
+11:07:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:07:17 INFO  : Sourcing of 'E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:07:17 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0' command is executed.
+11:07:17 INFO  : Hardware design information is loaded from 'E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper_hw_platform_0/system.hdf'.
+11:07:17 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0' command is executed.
+11:07:17 INFO  : 'stop' command is executed.
+11:07:18 INFO  : 'ps7_init' command is executed.
+11:07:18 INFO  : 'ps7_post_config' command is executed.
+11:07:18 INFO  : 'con' command is executed.
+11:07:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:07:18 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+11:07:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:07:19 INFO  : The application 'E:/AX7010/labs/vdma_test/vdma_test.sdk/fsbl/Debug/fsbl.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:07:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+loadhw E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+dow E:/AX7010/labs/vdma_test/vdma_test.sdk/fsbl/Debug/fsbl.elf
+----------------End of Script----------------
+
+11:07:19 INFO  : Memory regions updated for context APU
+11:07:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:07:19 INFO  : 'con' command is executed.
+11:07:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+con
+----------------End of Script----------------
+
+11:14:12 INFO  : Disconnected from the channel tcfchan#1.
+11:14:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210249854655" && level==0} -index 1' command is executed.
+11:14:12 INFO  : 'fpga -state' command is executed.
+11:14:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:14:13 INFO  : Sourcing of 'E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:14:14 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0' command is executed.
+11:14:14 INFO  : Hardware design information is loaded from 'E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper_hw_platform_0/system.hdf'.
+11:14:14 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0' command is executed.
+11:14:14 INFO  : 'stop' command is executed.
+11:14:15 INFO  : 'ps7_init' command is executed.
+11:14:15 INFO  : 'ps7_post_config' command is executed.
+11:14:15 INFO  : 'con' command is executed.
+11:14:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:14:15 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+11:14:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:14:16 INFO  : The application 'E:/AX7010/labs/vdma_test/vdma_test.sdk/fsbl/Debug/fsbl.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:14:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+loadhw E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+dow E:/AX7010/labs/vdma_test/vdma_test.sdk/fsbl/Debug/fsbl.elf
+----------------End of Script----------------
+
+11:14:16 INFO  : Memory regions updated for context APU
+11:14:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:14:16 INFO  : 'con' command is executed.
+11:14:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+con
+----------------End of Script----------------
+
+11:17:10 INFO  : Invoking Bootgen: bootgen -image fsbl.bif -o E:\AX7010\labs\vdma_test\vdma_test.sdk\fsbl\bootimage\BOOT.bin -w on
+11:17:10 INFO  : Overwriting existing bif file E:\AX7010\labs\vdma_test\vdma_test.sdk\fsbl\bootimage\fsbl.bif
+11:17:11 INFO  : Bootgen command execution is done.
+11:18:55 INFO  : Disconnected from the channel tcfchan#2.
+11:18:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210249854655" && level==0} -index 1' command is executed.
+11:18:56 INFO  : 'fpga -state' command is executed.
+11:18:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:18:57 INFO  : Sourcing of 'E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:18:57 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0' command is executed.
+11:18:57 INFO  : Hardware design information is loaded from 'E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper_hw_platform_0/system.hdf'.
+11:18:58 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0' command is executed.
+11:18:58 INFO  : 'stop' command is executed.
+11:18:58 INFO  : 'ps7_init' command is executed.
+11:18:58 INFO  : 'ps7_post_config' command is executed.
+11:18:58 INFO  : 'con' command is executed.
+11:18:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:18:59 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+11:18:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:18:59 INFO  : The application 'E:/AX7010/labs/vdma_test/vdma_test.sdk/fsbl/Debug/fsbl.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:18:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+loadhw E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+dow E:/AX7010/labs/vdma_test/vdma_test.sdk/fsbl/Debug/fsbl.elf
+----------------End of Script----------------
+
+11:18:59 INFO  : Memory regions updated for context APU
+11:18:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:18:59 INFO  : 'con' command is executed.
+11:18:59 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+con
+----------------End of Script----------------
+
+11:19:46 ERROR : Failed to call write_mss 
+Reason: ERROR: [Common 17-176] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [E:/AX7010/labs/vdma_test/vdma_test.sdk/fsbl_bsp/system.mss]
+
+11:21:11 WARN  : Unexpected exception occurred.
+java.io.IOException: Command [C 2615 xsdb eval "disconnect tcfchan#3"] aborted
+	at org.eclipse.tcf.core.AbstractChannel$9.run(AbstractChannel.java:753)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:209)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.tcf.core.ChannelTCP.get(ChannelTCP.java:162)
+	at org.eclipse.tcf.core.StreamChannel.read(StreamChannel.java:84)
+	at org.eclipse.tcf.core.AbstractChannel$1.run(AbstractChannel.java:254)
+11:24:13 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+11:24:15 INFO  : XSDB server has started successfully.
+11:24:15 INFO  : Processing command line option -hwspec E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper.hdf.
+11:24:18 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_0.
+11:26:45 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+11:26:47 INFO  : XSDB server has started successfully.
+11:26:50 INFO  : Processing command line option -hwspec E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper.hdf.
+11:26:51 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_0.
+11:28:20 INFO  : Invoking Bootgen: bootgen -image output.bif -o E:\AX7010\labs\vdma_test\BOOT.bin -w on
+11:28:20 INFO  : Bootgen command execution is done.
+11:29:18 INFO  : Invoking Bootgen: bootgen -image output.bif -o E:\AX7010\labs\vdma_test\BOOT.bin -w on
+11:29:19 INFO  : Bootgen command execution is done.
+20:13:22 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+20:13:24 INFO  : XSDB server has started successfully.
+20:13:24 INFO  : Processing command line option -hwspec E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper.hdf.
+20:13:24 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_0.
+20:13:25 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1477915989226,  Project:1477623076653
+20:13:25 INFO  : The hardware specification for project 'system_wrapper_hw_platform_0' is different from E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper.hdf.
+20:13:25 INFO  : Copied contents of E:/AX7010/labs/vdma_test/vdma_test.sdk/system_wrapper.hdf into \system_wrapper_hw_platform_0\system.hdf.
+20:13:28 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+20:13:36 INFO  : 
+20:13:38 INFO  : 
+20:13:38 INFO  : Updating hardware inferred compiler options for fsbl.
+20:13:39 INFO  : Updating hardware inferred compiler options for vdma_test.
+20:13:39 INFO  : Clearing existing target manager status.
+20:14:14 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+20:43:44 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+20:43:46 INFO  : XSDB server has started successfully.
+20:43:50 INFO  : Processing command line option -hwspec E:/AX7010/labs/vdma_test_to_flash/vdma_test.sdk/system_wrapper.hdf.
+20:45:02 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1477917799978,  Project:1477915989226
+20:45:02 INFO  : Copied contents of E:\AX7010\labs\vdma_test_to_flash\vdma_test.sdk\system_wrapper.hdf into \system_wrapper_hw_platform_0\system.hdf.
+20:45:04 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+20:45:06 INFO  : 
+20:45:07 INFO  : Updating hardware inferred compiler options for vdma_test.
+20:45:07 INFO  : Clearing existing target manager status.
+20:45:09 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+20:45:10 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+20:50:56 INFO  : Invoking Bootgen: bootgen -image output.bif -o E:\AX7010\labs\vdma_test_to_flash\BOOT.bin -w on
+20:50:56 INFO  : Overwriting existing bif file E:\AX7010\labs\vdma_test_to_flash\output.bif
+20:50:57 INFO  : Bootgen command execution is done.
+20:59:00 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+20:36:12 INFO  : Launching XSDB server: xsdb.bat E:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+20:36:14 INFO  : XSDB server has started successfully.
+20:36:16 INFO  : Processing command line option -hwspec Y:/project/AX/AX7010/AX7010_CD/02_source/vivado_project/09_vdma_test_to_flash/vdma_test.sdk/system_wrapper.hdf.
+20:39:29 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1484404079664,  Project:1477917799978
+20:39:29 INFO  : Copied contents of Y:/project/AX/AX7010/AX7010_CD/02_source/vivado_project/09_vdma_test_to_flash/vdma_test.sdk/system_wrapper.hdf into \system_wrapper_hw_platform_0\system.hdf.
+20:39:33 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+20:41:04 INFO  : 
+20:42:00 INFO  : 
+20:42:01 INFO  : Updating hardware inferred compiler options for fsbl.
+20:42:01 INFO  : Updating hardware inferred compiler options for vdma_test.
+20:42:01 INFO  : Clearing existing target manager status.
+20:51:19 INFO  : Invoking Bootgen: bootgen -image output.bif -o Y:\project\AX\AX7010\AX7010_CD\02_source\vivado_project\09_vdma_test_to_flash\BOOT.bin -w on
+20:51:19 INFO  : Overwriting existing bif file Y:\project\AX\AX7010\AX7010_CD\02_source\vivado_project\09_vdma_test_to_flash\output.bif
+20:51:20 INFO  : Bootgen command execution is done.
+21:13:15 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

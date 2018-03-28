@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="video_pll_synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1474868018">
+  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/video_pll_synth_1/constrs_in.xml"/>
+  <File Type="RDS-DCP" Name="video_pll.dcp"/>
+  <File Type="RUN-SRCS" Name="$PDATADIR/runs/video_pll_synth_1/sources.xml"/>
+  <File Type="RDS-UTIL-PB" Name="video_pll_utilization_synth.pb"/>
+  <File Type="RUN-STRAT" Name="$PDATADIR/runs/video_pll_synth_1/video_pll_synth_1.psg"/>
+  <File Type="PA-TCL" Name="video_pll.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="video_pll_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="video_pll.vds"/>
+  <File Type="RDS-UTIL" Name="video_pll_utilization_synth.rpt"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="video_pll_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="video_pll_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/video_pll">
+    <File Path="$PSRCDIR/sources_1/ip/video_pll/video_pll.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="video_pll"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/video_pll">
+    <File Path="$PSRCDIR/sources_1/ip/video_pll/video_pll.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="video_pll"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

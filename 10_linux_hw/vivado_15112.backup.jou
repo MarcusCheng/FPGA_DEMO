@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Sat Nov 05 19:59:20 2016
+# Process ID: 15112
+# Current directory: E:/AX7010/labs/linux_hw
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11356 E:\AX7010\labs\linux_hw\linux_hw.xpr
+# Log file: E:/AX7010/labs/linux_hw/vivado.log
+# Journal file: E:/AX7010/labs/linux_hw\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/AX7010/labs/linux_hw/linux_hw.xpr
+archive_project E:/AX7010/labs/linux_hw.xpr.zip -temp_dir E:/AX7010/labs/linux_hw/.Xil/Vivado-15112-AVIC -force -exclude_run_results -include_config_settings

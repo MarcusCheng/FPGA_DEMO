@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Thu Nov 03 10:18:49 2016
+# Process ID: 6824
+# Current directory: E:/AX7010/labs/vdma_test_to_flash
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9552 E:\AX7010\labs\vdma_test_to_flash\vdma_test.xpr
+# Log file: E:/AX7010/labs/vdma_test_to_flash/vivado.log
+# Journal file: E:/AX7010/labs/vdma_test_to_flash\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/AX7010/labs/vdma_test_to_flash/vdma_test.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/AX7010/labs/repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.4/data/ip'.
+open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:11 . Memory (MB): peak = 893.500 ; gain = 242.695
+save_project_as Linux_boot E:/AX7010/labs/Linux_boot -force
+save_project_as: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 893.500 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 03 10:21:05 2016...

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Sat Nov 05 20:26:29 2016
+# Process ID: 14912
+# Current directory: E:/AX7010/labs/vdma_test_to_flash/vdma_test.runs/synth_1
+# Command line: vivado.exe -log system_wrapper.vds -mode batch -messageDb vivado.pb -notrace -source system_wrapper.tcl
+# Log file: E:/AX7010/labs/vdma_test_to_flash/vdma_test.runs/synth_1/system_wrapper.vds
+# Journal file: E:/AX7010/labs/vdma_test_to_flash/vdma_test.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source system_wrapper.tcl -notrace

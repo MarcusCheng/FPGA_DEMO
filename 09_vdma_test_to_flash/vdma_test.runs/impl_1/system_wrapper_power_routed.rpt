@@ -1,0 +1,423 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date             : Sat Nov 05 20:35:05 2016
+| Host             : AVIC running 64-bit Service Pack 1  (build 7601)
+| Command          : 
+| Design           : system_wrapper
+| Device           : xc7z010clg400-1
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+-------+
+| Total On-Chip Power (W)  | 2.036 |
+| Dynamic (W)              | 1.898 |
+| Device Static (W)        | 0.139 |
+| Total Off-Chip Power (W) | 0.008 |
+| Effective TJA (C/W)      | 11.5  |
+| Max Ambient (C)          | 61.6  |
+| Junction Temperature (C) | 48.4  |
+| Confidence Level         | Low   |
+| Setting File             | ---   |
+| Simulation Activity File | ---   |
+| Design Nets Matched      | NA    |
++--------------------------+-------+
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.024 |        8 |       --- |             --- |
+| Slice Logic              |     0.010 |     9357 |       --- |             --- |
+|   LUT as Logic           |     0.008 |     2870 |     17600 |           16.31 |
+|   Register               |    <0.001 |     5059 |     35200 |           14.37 |
+|   CARRY4                 |    <0.001 |      122 |      4400 |            2.77 |
+|   F7/F8 Muxes            |    <0.001 |      144 |     17600 |            0.82 |
+|   LUT as Shift Register  |    <0.001 |      140 |      6000 |            2.33 |
+|   Others                 |     0.000 |      496 |       --- |             --- |
+|   LUT as Distributed RAM |     0.000 |        2 |      6000 |            0.03 |
+| Signals                  |     0.013 |     6975 |       --- |             --- |
+| Block RAM                |     0.006 |        8 |        60 |           13.33 |
+| MMCM                     |     0.107 |        1 |         2 |           50.00 |
+| I/O                      |     0.192 |       10 |       100 |           10.00 |
+| PS7                      |     1.537 |        1 |       --- |             --- |
+| Static Power             |     0.139 |          |           |                 |
+| Total                    |     2.028 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.063 |       0.054 |      0.008 |
+| Vccaux    |       1.800 |     0.072 |       0.060 |      0.012 |
+| Vcco33    |       3.300 |     0.061 |       0.060 |      0.001 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.001 |       0.000 |      0.001 |
+| Vcco15    |       1.500 |     0.001 |       0.000 |      0.001 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.762 |       0.727 |      0.034 |
+| Vccpaux   |       1.800 |     0.061 |       0.051 |      0.010 |
+| Vccpll    |       1.800 |     0.018 |       0.015 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.459 |       0.457 |      0.002 |
+| Vcco_mio0 |       1.800 |     0.004 |       0.003 |      0.001 |
+| Vcco_mio1 |       1.800 |     0.002 |       0.001 |      0.001 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                           |                                                                                                            |
+|                             |            |                                                        |                                                                                                            |
+| Overall confidence level    | Low        |                                                        |                                                                                                            |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++------------------------+-----------------------------------------------------------+-----------------+
+| Clock                  | Domain                                                    | Constraint (ns) |
++------------------------+-----------------------------------------------------------+-----------------+
+| I                      | system_i/axi_dynclk_0/U0/Inst_mmcme2_drp/I                |             2.0 |
+| I                      | system_i/axi_dynclk_0/U0/PXL_CLK_5X_O                     |             2.0 |
+| axi_dynclk_0_PXL_CLK_O | system_i/axi_dynclk_0/U0/PXL_CLK_O                        |            10.0 |
+| clk_fpga_0             | system_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0] |            10.0 |
+| clk_fpga_1             | system_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1] |             7.1 |
+| mmcm_fbclk_out         | system_i/axi_dynclk_0/U0/Inst_mmcme2_drp/mmcm_fbclk_out   |            10.0 |
++------------------------+-----------------------------------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++------------------------------------------------------------------------------------------+-----------+
+| Name                                                                                     | Power (W) |
++------------------------------------------------------------------------------------------+-----------+
+| system_wrapper                                                                           |     1.889 |
+|   system_i                                                                               |     1.889 |
+|     axi_dynclk_0                                                                         |     0.110 |
+|       U0                                                                                 |     0.110 |
+|         Inst_mmcme2_drp                                                                  |     0.108 |
+|         axi_dynclk_S00_AXI_inst                                                          |     0.001 |
+|     axi_gpio_0                                                                           |    <0.001 |
+|       U0                                                                                 |    <0.001 |
+|         AXI_LITE_IPIF_I                                                                  |    <0.001 |
+|           I_SLAVE_ATTACHMENT                                                             |    <0.001 |
+|             I_DECODER                                                                    |    <0.001 |
+|         INTR_CTRLR_GEN.INTERRUPT_CONTROL_I                                               |    <0.001 |
+|         gpio_core_1                                                                      |    <0.001 |
+|           Not_Dual.INPUT_DOUBLE_REGS3                                                    |    <0.001 |
+|     axi_mem_intercon                                                                     |     0.001 |
+|       s00_couplers                                                                       |     0.001 |
+|         auto_pc                                                                          |     0.001 |
+|           inst                                                                           |     0.001 |
+|             gen_axi4_axi3.axi3_conv_inst                                                 |     0.001 |
+|               USE_READ.USE_SPLIT_R.read_addr_inst                                        |     0.001 |
+|                 USE_R_CHANNEL.cmd_queue                                                  |    <0.001 |
+|                   inst                                                                   |    <0.001 |
+|                     fifo_gen_inst                                                        |    <0.001 |
+|                       inst_fifo_gen                                                      |    <0.001 |
+|                         gconvfifo.rf                                                     |    <0.001 |
+|                           grf.rf                                                         |    <0.001 |
+|                             gntv_or_sync_fifo.gl0.rd                                     |    <0.001 |
+|                               gr1.rfwft                                                  |    <0.001 |
+|                               grss.rsts                                                  |    <0.001 |
+|                               rpntr                                                      |    <0.001 |
+|                             gntv_or_sync_fifo.gl0.wr                                     |    <0.001 |
+|                               gwss.wsts                                                  |    <0.001 |
+|                               wpntr                                                      |    <0.001 |
+|                             gntv_or_sync_fifo.mem                                        |    <0.001 |
+|                               gdm.dm                                                     |    <0.001 |
+|                                 RAM_reg_0_31_0_0                                         |    <0.001 |
+|                             rstblk                                                       |    <0.001 |
+|     axi_vdma_0                                                                           |     0.013 |
+|       U0                                                                                 |     0.013 |
+|         AXI_LITE_REG_INTERFACE_I                                                         |     0.002 |
+|           GEN_AXI_LITE_IF.AXI_LITE_IF_I                                                  |     0.002 |
+|             GEN_LITE_IS_ASYNC.GEN_MM2S_ONLY_ASYNC_LITE_ACCESS.LITE_WVALID_MM2S_CDC_I     |    <0.001 |
+|           GEN_MM2S_LITE_CROSSINGS.GEN_MM2S_CROSSINGS_ASYNC.MM2S_INTRPT_CROSSING_I        |    <0.001 |
+|         GEN_SPRT_FOR_MM2S.ADDR32.I_MM2S_DMA_MNGR                                         |     0.002 |
+|           I_CMDSTS                                                                       |    <0.001 |
+|           I_SM                                                                           |    <0.001 |
+|           I_STS_MNGR                                                                     |    <0.001 |
+|           VIDEO_GENLOCK_I                                                                |    <0.001 |
+|           VIDEO_REG_I                                                                    |    <0.001 |
+|             GEN_REGISTER_DIRECT.GEN_REGDIRECT_DRES.VIDREGISTER_I                         |    <0.001 |
+|         GEN_SPRT_FOR_MM2S.MM2S_FSYNC_I                                                   |    <0.001 |
+|         GEN_SPRT_FOR_MM2S.MM2S_LINEBUFFER_I                                              |     0.001 |
+|           GEN_LINEBUF_NO_SOF.GEN_FOR_ASYNC.ALL_LINES_XFRED_P_S_CDC_I                     |    <0.001 |
+|           GEN_LINEBUF_NO_SOF.GEN_FOR_ASYNC.HALT_CDC_I                                    |    <0.001 |
+|           GEN_LINEBUF_NO_SOF.GEN_FOR_ASYNC.SHUTDOWN_RST_CDC_I                            |    <0.001 |
+|           GEN_LINEBUF_NO_SOF.GEN_LINEBUFFER.GEN_ASYNC_FIFO.LB_BUILT_IN.I_LINEBUFFER_FIFO |    <0.001 |
+|             fg_builtin_fifo_inst                                                         |    <0.001 |
+|               inst_fifo_gen                                                              |    <0.001 |
+|                 gconvfifo.rf                                                             |    <0.001 |
+|                   gbi.bi                                                                 |    <0.001 |
+|                     g7ser_birst.rstbt                                                    |    <0.001 |
+|                     v7_bi_fifo.fblk                                                      |    <0.001 |
+|                       gextw[1].gnll_fifo.inst_extd                                       |    <0.001 |
+|                         gonep.inst_prim                                                  |    <0.001 |
+|                       gextw[2].gnll_fifo.inst_extd                                       |    <0.001 |
+|                         gonep.inst_prim                                                  |    <0.001 |
+|                       gextw[3].gnll_fifo.inst_extd                                       |    <0.001 |
+|                         gonep.inst_prim                                                  |    <0.001 |
+|                       gextw[4].gnll_fifo.inst_extd                                       |    <0.001 |
+|                         gonep.inst_prim                                                  |    <0.001 |
+|           GEN_LINEBUF_NO_SOF.GEN_LINEBUFFER.I_MSTR_SKID                                  |    <0.001 |
+|         GEN_SPRT_FOR_MM2S.MM2S_REGISTER_MODULE_I                                         |    <0.001 |
+|           GEN_REG_DIRECT_MODE.REGDIRECT_I                                                |    <0.001 |
+|           I_DMA_REGISTER                                                                 |    <0.001 |
+|           LITE_READ_MUX_I                                                                |     0.000 |
+|         GEN_SPRT_FOR_MM2S.MM2S_SOF_I                                                     |    <0.001 |
+|         GEN_SPRT_FOR_MM2S.MM2S_VID_CDC_I                                                 |    <0.001 |
+|           GEN_CDC_FOR_ASYNC.FSYNC_OUT_CDC_I                                              |    <0.001 |
+|           GEN_CDC_FOR_ASYNC.SOF_CDC_I                                                    |    <0.001 |
+|         I_AXI_DMA_INTRPT                                                                 |    <0.001 |
+|         I_PRMRY_DATAMOVER                                                                |     0.006 |
+|           GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER                                              |     0.006 |
+|             GEN_INCLUDE_MM2S_SF.I_RD_SF                                                  |     0.003 |
+|               I_DATA_FIFO                                                                |     0.003 |
+|                 BLK_MEM.I_SYNC_FIFOGEN_FIFO                                              |     0.003 |
+|                   FAMILY_SUPPORTED.I_SYNC_FIFO_BRAM                                      |     0.003 |
+|                     inst_fifo_gen                                                        |     0.003 |
+|                       gconvfifo.rf                                                       |     0.003 |
+|                         grf.rf                                                           |     0.003 |
+|                           gntv_or_sync_fifo.gl0.rd                                       |    <0.001 |
+|                             gr1.rfwft                                                    |    <0.001 |
+|                             grss.gdc.dc                                                  |    <0.001 |
+|                               gsym_dc.dc                                                 |    <0.001 |
+|                             grss.rsts                                                    |    <0.001 |
+|                             rpntr                                                        |    <0.001 |
+|                           gntv_or_sync_fifo.gl0.wr                                       |    <0.001 |
+|                             gwss.wsts                                                    |    <0.001 |
+|                             wpntr                                                        |    <0.001 |
+|                           gntv_or_sync_fifo.mem                                          |     0.003 |
+|                             gbm.gbmg.gbmgb.ngecc.bmg                                     |     0.003 |
+|                               inst_blk_mem_gen                                           |     0.003 |
+|                                 gnativebmg.native_blk_mem_gen                            |     0.003 |
+|                                   valid.cstr                                             |     0.003 |
+|                                     ramloop[0].ram.r                                     |     0.003 |
+|                                       prim_noinit.ram                                    |     0.003 |
+|               OMIT_DRE_CNTL.I_DRE_CNTL_FIFO                                              |    <0.001 |
+|                 USE_SRL_FIFO.I_SYNC_FIFO                                                 |    <0.001 |
+|                   I_SRL_FIFO_RBU_F                                                       |    <0.001 |
+|                     CNTR_INCR_DECR_ADDN_F_I                                              |    <0.001 |
+|                     DYNSHREG_F_I                                                         |    <0.001 |
+|             I_ADDR_CNTL                                                                  |    <0.001 |
+|               GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO                                             |    <0.001 |
+|                 USE_SRL_FIFO.I_SYNC_FIFO                                                 |    <0.001 |
+|                   I_SRL_FIFO_RBU_F                                                       |    <0.001 |
+|                     CNTR_INCR_DECR_ADDN_F_I                                              |    <0.001 |
+|                     DYNSHREG_F_I                                                         |    <0.001 |
+|             I_CMD_STATUS                                                                 |    <0.001 |
+|               GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO                                         |    <0.001 |
+|                 USE_SRL_FIFO.I_SYNC_FIFO                                                 |    <0.001 |
+|                   I_SRL_FIFO_RBU_F                                                       |    <0.001 |
+|                     CNTR_INCR_DECR_ADDN_F_I                                              |    <0.001 |
+|                     DYNSHREG_F_I                                                         |    <0.001 |
+|               I_CMD_FIFO                                                                 |    <0.001 |
+|                 USE_SRL_FIFO.I_SYNC_FIFO                                                 |    <0.001 |
+|                   I_SRL_FIFO_RBU_F                                                       |    <0.001 |
+|                     CNTR_INCR_DECR_ADDN_F_I                                              |    <0.001 |
+|                     DYNSHREG_F_I                                                         |    <0.001 |
+|             I_MSTR_PCC                                                                   |     0.001 |
+|             I_RD_DATA_CNTL                                                               |    <0.001 |
+|               GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO                                        |    <0.001 |
+|                 USE_SRL_FIFO.I_SYNC_FIFO                                                 |    <0.001 |
+|                   I_SRL_FIFO_RBU_F                                                       |    <0.001 |
+|                     CNTR_INCR_DECR_ADDN_F_I                                              |    <0.001 |
+|                     DYNSHREG_F_I                                                         |    <0.001 |
+|             I_RD_STATUS_CNTLR                                                            |    <0.001 |
+|             I_RESET                                                                      |    <0.001 |
+|         I_RST_MODULE                                                                     |    <0.001 |
+|           GEN_RESET_FOR_MM2S.RESET_I                                                     |    <0.001 |
+|             GEN_MIN_FOR_ASYNC.AXIS_CLR_CDC_I                                             |    <0.001 |
+|             GEN_MIN_FOR_ASYNC.AXIS_IDLE_CDC_I                                            |    <0.001 |
+|             GEN_MIN_FOR_ASYNC.AXIS_MIN_CDC_I                                             |    <0.001 |
+|             GEN_MIN_FOR_ASYNC.AXIS_RESET_CDC_I                                           |    <0.001 |
+|             GEN_MIN_FOR_ASYNC.LITE_CLR_CDC_I                                             |    <0.001 |
+|             GEN_MIN_FOR_ASYNC.LITE_IDLE_CDC_I                                            |    <0.001 |
+|             GEN_MIN_FOR_ASYNC.LITE_MIN_CDC_I                                             |    <0.001 |
+|             GEN_MIN_FOR_ASYNC.LITE_RESET_CDC_I                                           |    <0.001 |
+|             GEN_RESET_FOR_ASYNC.AXIS_RESET_CDC_I                                         |    <0.001 |
+|             GEN_RESET_FOR_ASYNC.HARD_RESET_CDC_I                                         |    <0.001 |
+|     axis_subset_converter_0                                                              |     0.000 |
+|     processing_system7_0                                                                 |     1.538 |
+|       inst                                                                               |     1.538 |
+|         xlnx_axi_wrshim_unwrap_inst_gp0                                                  |     0.000 |
+|         xlnx_axi_wrshim_unwrap_inst_gp1                                                  |     0.000 |
+|     processing_system7_0_axi_periph                                                      |     0.006 |
+|       s00_couplers                                                                       |     0.005 |
+|         auto_pc                                                                          |     0.005 |
+|           inst                                                                           |     0.005 |
+|             gen_axilite.gen_b2s_conv.axilite_b2s                                         |     0.005 |
+|               RD.ar_channel_0                                                            |    <0.001 |
+|                 ar_cmd_fsm_0                                                             |    <0.001 |
+|                 cmd_translator_0                                                         |    <0.001 |
+|                   incr_cmd_0                                                             |    <0.001 |
+|                   wrap_cmd_0                                                             |    <0.001 |
+|               RD.r_channel_0                                                             |     0.001 |
+|                 rd_data_fifo_0                                                           |    <0.001 |
+|                 transaction_fifo_0                                                       |    <0.001 |
+|               SI_REG                                                                     |     0.002 |
+|                 ar_pipe                                                                  |    <0.001 |
+|                 aw_pipe                                                                  |    <0.001 |
+|                 b_pipe                                                                   |    <0.001 |
+|                 r_pipe                                                                   |    <0.001 |
+|               WR.aw_channel_0                                                            |    <0.001 |
+|                 aw_cmd_fsm_0                                                             |    <0.001 |
+|                 cmd_translator_0                                                         |    <0.001 |
+|                   incr_cmd_0                                                             |    <0.001 |
+|                   wrap_cmd_0                                                             |    <0.001 |
+|               WR.b_channel_0                                                             |    <0.001 |
+|                 bid_fifo_0                                                               |    <0.001 |
+|                 bresp_fifo_0                                                             |    <0.001 |
+|       xbar                                                                               |     0.001 |
+|         inst                                                                             |     0.001 |
+|           gen_sasd.crossbar_sasd_0                                                       |     0.001 |
+|             addr_arbiter_inst                                                            |    <0.001 |
+|             gen_decerr.decerr_slave_inst                                                 |    <0.001 |
+|             reg_slice_r                                                                  |    <0.001 |
+|             splitter_ar                                                                  |    <0.001 |
+|             splitter_aw                                                                  |    <0.001 |
+|     rgb2dvi_0                                                                            |     0.198 |
+|       U0                                                                                 |     0.198 |
+|         ClockSerializer                                                                  |     0.045 |
+|         DataEncoders[0].DataEncoder                                                      |     0.002 |
+|         DataEncoders[0].DataSerializer                                                   |     0.050 |
+|         DataEncoders[1].DataEncoder                                                      |     0.002 |
+|         DataEncoders[1].DataSerializer                                                   |     0.049 |
+|         DataEncoders[2].DataEncoder                                                      |     0.002 |
+|         DataEncoders[2].DataSerializer                                                   |     0.049 |
+|         LockLostReset                                                                    |    <0.001 |
+|           SyncAsyncx                                                                     |    <0.001 |
+|     rst_processing_system7_0_100M                                                        |    <0.001 |
+|       U0                                                                                 |    <0.001 |
+|         EXT_LPF                                                                          |    <0.001 |
+|           ACTIVE_LOW_EXT.ACT_LO_EXT                                                      |    <0.001 |
+|         SEQ                                                                              |    <0.001 |
+|           SEQ_COUNTER                                                                    |    <0.001 |
+|     rst_processing_system7_0_140M                                                        |    <0.001 |
+|       U0                                                                                 |    <0.001 |
+|         EXT_LPF                                                                          |    <0.001 |
+|           ACTIVE_LOW_EXT.ACT_LO_EXT                                                      |    <0.001 |
+|         SEQ                                                                              |    <0.001 |
+|           SEQ_COUNTER                                                                    |    <0.001 |
+|     v_axi4s_vid_out_0                                                                    |     0.007 |
+|       inst                                                                               |     0.007 |
+|         COUPLER_INST                                                                     |     0.006 |
+|           FIFO_INST                                                                      |     0.006 |
+|             inst_fifo_gen                                                                |     0.006 |
+|               gconvfifo.rf                                                               |     0.006 |
+|                 grf.rf                                                                   |     0.006 |
+|                   gntv_or_sync_fifo.gcx.clkx                                             |     0.001 |
+|                     gsync_stage[1].rd_stg_inst                                           |    <0.001 |
+|                     gsync_stage[1].wr_stg_inst                                           |    <0.001 |
+|                     gsync_stage[2].rd_stg_inst                                           |    <0.001 |
+|                     gsync_stage[2].wr_stg_inst                                           |    <0.001 |
+|                   gntv_or_sync_fifo.gl0.rd                                               |    <0.001 |
+|                     gr1.grdc2.rdc                                                        |    <0.001 |
+|                     gr1.rfwft                                                            |    <0.001 |
+|                     gras.rsts                                                            |    <0.001 |
+|                       c0                                                                 |    <0.001 |
+|                       c1                                                                 |    <0.001 |
+|                     rpntr                                                                |    <0.001 |
+|                   gntv_or_sync_fifo.gl0.wr                                               |    <0.001 |
+|                     gwas.wsts                                                            |    <0.001 |
+|                       c1                                                                 |    <0.001 |
+|                       c2                                                                 |    <0.001 |
+|                     wpntr                                                                |    <0.001 |
+|                   gntv_or_sync_fifo.mem                                                  |     0.004 |
+|                     gbm.gbmg.gbmgb.ngecc.bmg                                             |     0.004 |
+|                       inst_blk_mem_gen                                                   |     0.004 |
+|                         gnativebmg.native_blk_mem_gen                                    |     0.004 |
+|                           valid.cstr                                                     |     0.004 |
+|                             ramloop[0].ram.r                                             |     0.001 |
+|                               prim_noinit.ram                                            |     0.001 |
+|                             ramloop[1].ram.r                                             |     0.001 |
+|                               prim_noinit.ram                                            |     0.001 |
+|                             ramloop[2].ram.r                                             |     0.001 |
+|                               prim_noinit.ram                                            |     0.001 |
+|                   rstblk                                                                 |    <0.001 |
+|         FORMATTER_INST                                                                   |    <0.001 |
+|         SYNC_INST                                                                        |    <0.001 |
+|     v_tc_0                                                                               |     0.016 |
+|       U0                                                                                 |     0.016 |
+|         U_TC_TOP                                                                         |     0.001 |
+|           GEN_GENERATOR.U_TC_GEN                                                         |     0.001 |
+|         U_VIDEO_CTRL                                                                     |     0.014 |
+|           AXI4_LITE_INTERFACE.AXI_LITE_IPIF_I                                            |    <0.001 |
+|             I_SLAVE_ATTACHMENT                                                           |    <0.001 |
+|               I_DECODER                                                                  |    <0.001 |
+|           AXI4_LITE_INTERFACE.CORE_MUX0                                                  |    <0.001 |
+|           AXI4_LITE_INTERFACE.GENR_MUX0                                                  |     0.004 |
+|           AXI4_LITE_INTERFACE.SYNC2PROCCLK_I                                             |    <0.001 |
+|           AXI4_LITE_INTERFACE.SYNC2VIDCLK_I                                              |     0.003 |
+|     xlconcat_0                                                                           |     0.000 |
+|     xlconstant_0                                                                         |     0.000 |
++------------------------------------------------------------------------------------------+-----------+
+
+

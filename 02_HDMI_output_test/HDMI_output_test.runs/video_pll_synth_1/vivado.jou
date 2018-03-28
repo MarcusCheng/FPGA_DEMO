@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Mon Sep 26 13:33:42 2016
+# Process ID: 9636
+# Current directory: F:/AX7010/labs/HDMI_output_test/HDMI_output_test.runs/video_pll_synth_1
+# Command line: vivado.exe -log video_pll.vds -mode batch -messageDb vivado.pb -notrace -source video_pll.tcl
+# Log file: F:/AX7010/labs/HDMI_output_test/HDMI_output_test.runs/video_pll_synth_1/video_pll.vds
+# Journal file: F:/AX7010/labs/HDMI_output_test/HDMI_output_test.runs/video_pll_synth_1\vivado.jou
+#-----------------------------------------------------------
+source video_pll.tcl -notrace

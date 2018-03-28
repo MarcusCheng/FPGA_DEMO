@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Thu Jun 08 14:08:34 2017
+# Process ID: 1260
+# Current directory: Y:/project/AX/AX7010/AX7010_CD/02_source/vivado_project/10_linux_hw
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6704 Y:\project\AX\AX7010\AX7010_CD\02_source\vivado_project\10_linux_hw\linux_hw.xpr
+# Log file: Y:/project/AX/AX7010/AX7010_CD/02_source/vivado_project/10_linux_hw/vivado.log
+# Journal file: Y:/project/AX/AX7010/AX7010_CD/02_source/vivado_project/10_linux_hw\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project Y:/project/AX/AX7010/AX7010_CD/02_source/vivado_project/10_linux_hw/linux_hw.xpr

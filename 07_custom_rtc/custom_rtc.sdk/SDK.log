@@ -1,0 +1,59 @@
+22:02:21 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+22:02:23 INFO  : XSDB server has started successfully.
+22:02:23 INFO  : Processing command line option -hwspec E:/AX7010/labs/custom_rtc/custom_rtc.sdk/system_wrapper.hdf.
+22:05:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:05:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210249854655" && level==0} -index 1' command is executed.
+22:05:19 INFO  : FPGA configured successfully with bitstream "E:/AX7010/labs/custom_rtc/custom_rtc.runs/impl_1/system_wrapper.bit"
+22:05:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210249854655" && level==0} -index 1' command is executed.
+22:05:39 INFO  : 'fpga -state' command is executed.
+22:05:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:05:39 INFO  : Sourcing of 'E:/AX7010/labs/custom_rtc/custom_rtc.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+22:05:39 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0' command is executed.
+22:05:39 INFO  : Hardware design information is loaded from 'E:/AX7010/labs/custom_rtc/custom_rtc.sdk/system_wrapper_hw_platform_0/system.hdf'.
+22:05:40 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0' command is executed.
+22:05:40 INFO  : 'stop' command is executed.
+22:05:40 INFO  : 'ps7_init' command is executed.
+22:05:40 INFO  : 'ps7_post_config' command is executed.
+22:05:40 INFO  : 'con' command is executed.
+22:05:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:05:41 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+22:05:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:05:41 INFO  : The application 'E:/AX7010/labs/custom_rtc/custom_rtc.sdk/rtc_test/Debug/rtc_test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:05:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/AX7010/labs/custom_rtc/custom_rtc.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+loadhw E:/AX7010/labs/custom_rtc/custom_rtc.sdk/system_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+dow E:/AX7010/labs/custom_rtc/custom_rtc.sdk/rtc_test/Debug/rtc_test.elf
+----------------End of Script----------------
+
+22:05:41 INFO  : Memory regions updated for context APU
+22:05:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:05:42 INFO  : 'con' command is executed.
+22:05:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854655"} -index 0
+con
+----------------End of Script----------------
+
+22:08:22 WARN  : Unexpected exception occurred.
+java.io.IOException: Command [C 136 xsdb eval "disconnect tcfchan#1"] aborted
+	at org.eclipse.tcf.core.AbstractChannel$9.run(AbstractChannel.java:753)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:209)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.tcf.core.ChannelTCP.get(ChannelTCP.java:162)
+	at org.eclipse.tcf.core.StreamChannel.read(StreamChannel.java:84)
+	at org.eclipse.tcf.core.AbstractChannel$1.run(AbstractChannel.java:254)

@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Thu Jun 08 14:08:34 2017
+# Process ID: 1260
+# Current directory: Y:/project/AX/AX7010/AX7010_CD/02_source/vivado_project/10_linux_hw
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6704 Y:\project\AX\AX7010\AX7010_CD\02_source\vivado_project\10_linux_hw\linux_hw.xpr
+# Log file: Y:/project/AX/AX7010/AX7010_CD/02_source/vivado_project/10_linux_hw/vivado.log
+# Journal file: Y:/project/AX/AX7010/AX7010_CD/02_source/vivado_project/10_linux_hw\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project Y:/project/AX/AX7010/AX7010_CD/02_source/vivado_project/10_linux_hw/linux_hw.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'y:/project/AX/AX7010/AX7010_CD/02_source/vivado_project/repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2015.4/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'system_axis_subset_converter_0_0' generated file not found 'y:/project/AX/AX7010/AX7010_CD/02_source/vivado_project/10_linux_hw/linux_hw.srcs/sources_1/bd/system/ip/system_axis_subset_converter_0_0/axis_subset_converter_v1_1/hdl/verilog/axis_subset_converter_v1_1_axis_subset_converter_system_axis_subset_converter_0_0.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_axis_subset_converter_0_0' generated file not found 'y:/project/AX/AX7010/AX7010_CD/02_source/vivado_project/10_linux_hw/linux_hw.srcs/sources_1/bd/system/ip/system_axis_subset_converter_0_0/axis_subset_converter_v1_1/hdl/verilog/axis_subset_converter_v1_1_axis_subset_converter_system_axis_subset_converter_0_0.v'. Please regenerate to continue.
+open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 859.285 ; gain = 223.656
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Jun 08 14:10:37 2017...

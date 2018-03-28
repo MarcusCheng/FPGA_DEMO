@@ -1,0 +1,169 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date             : Thu Sep 29 15:12:46 2016
+| Host             : AVIC running 64-bit Service Pack 1  (build 7601)
+| Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb
+| Design           : top
+| Device           : xc7z010clg400-1
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+-----------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------+
+| Total On-Chip Power (W)  | 0.413  |
+| Dynamic (W)              | 0.307  |
+| Device Static (W)        | 0.106  |
+| Total Off-Chip Power (W) | 0.008  |
+| Effective TJA (C/W)      | 11.5   |
+| Max Ambient (C)          | 80.3   |
+| Junction Temperature (C) | 29.7   |
+| Confidence Level         | Medium |
+| Setting File             | ---    |
+| Simulation Activity File | ---    |
+| Design Nets Matched      | NA     |
++--------------------------+--------+
+
+
+1.1 On-Chip Components
+----------------------
+
++-------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
++-------------------------+-----------+----------+-----------+-----------------+
+| Clocks                  |     0.005 |        6 |       --- |             --- |
+| Slice Logic             |    <0.001 |      204 |       --- |             --- |
+|   LUT as Logic          |    <0.001 |       73 |     17600 |            0.41 |
+|   CARRY4                |    <0.001 |        9 |      4400 |            0.20 |
+|   Register              |    <0.001 |       81 |     35200 |            0.23 |
+|   LUT as Shift Register |    <0.001 |        3 |      6000 |            0.05 |
+|   Others                |     0.000 |       31 |       --- |             --- |
+| Signals                 |    <0.001 |      142 |       --- |             --- |
+| MMCM                    |     0.106 |        1 |         2 |           50.00 |
+| I/O                     |     0.187 |       10 |       100 |           10.00 |
+| Static Power            |     0.106 |          |           |                 |
+| Total                   |     0.405 |          |           |                 |
++-------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.012 |       0.008 |      0.004 |
+| Vccaux    |       1.800 |     0.070 |       0.059 |      0.011 |
+| Vcco33    |       3.300 |     0.060 |       0.059 |      0.001 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.018 |       0.000 |      0.018 |
+| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                        | Action                                                                                                     |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                               |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks         |                                                                                                            |
+| I/O nodes activity          | High       | User specified more than 95% of inputs         |                                                                                                            |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                   |                                                                                                            |
+|                             |            |                                                |                                                                                                            |
+| Overall confidence level    | Medium     |                                                |                                                                                                            |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++--------------------+--------------------------------------+-----------------+
+| Clock              | Domain                               | Constraint (ns) |
++--------------------+--------------------------------------+-----------------+
+| clk_out1_video_pll | video_pll_m0/inst/clk_out1_video_pll |             6.7 |
+| clk_out2_video_pll | video_pll_m0/inst/clk_out2_video_pll |             1.3 |
+| clkfbout_video_pll | video_pll_m0/inst/clkfbout_video_pll |            80.0 |
+| sys_clk            | sys_clk                              |            20.0 |
++--------------------+--------------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++------------------------------------+-----------+
+| Name                               | Power (W) |
++------------------------------------+-----------+
+| top                                |     0.299 |
+|   hdmi_color_bar                   |     0.001 |
+|   rgb2dvi_m0                       |     0.191 |
+|     ClockSerializer                |     0.046 |
+|     DataEncoders[0].DataEncoder    |    <0.001 |
+|     DataEncoders[0].DataSerializer |     0.050 |
+|     DataEncoders[1].DataEncoder    |    <0.001 |
+|     DataEncoders[1].DataSerializer |     0.047 |
+|     DataEncoders[2].DataEncoder    |    <0.001 |
+|     DataEncoders[2].DataSerializer |     0.047 |
+|     LockLostReset                  |    <0.001 |
+|       SyncAsyncx                   |    <0.001 |
+|   video_pll_m0                     |     0.107 |
+|     inst                           |     0.107 |
++------------------------------------+-----------+
+
+

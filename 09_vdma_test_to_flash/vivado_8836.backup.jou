@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Mon Oct 31 20:29:46 2016
+# Process ID: 8836
+# Current directory: E:/AX7010/labs/vdma_test_to_flash
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7764 E:\AX7010\labs\vdma_test_to_flash\vdma_test.xpr
+# Log file: E:/AX7010/labs/vdma_test_to_flash/vivado.log
+# Journal file: E:/AX7010/labs/vdma_test_to_flash\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/AX7010/labs/vdma_test_to_flash/vdma_test.xpr
+open_bd_design {E:/AX7010/labs/vdma_test_to_flash/vdma_test.srcs/sources_1/bd/system/system.bd}
+startgroup
+set_property -dict [list CONFIG.PCW_QSPI_PERIPHERAL_ENABLE {1} CONFIG.PCW_QSPI_GRP_SINGLE_SS_ENABLE {1} CONFIG.PCW_SD0_PERIPHERAL_ENABLE {1} CONFIG.PCW_SD0_GRP_CD_ENABLE {1} CONFIG.PCW_SD0_GRP_CD_IO {MIO 47}] [get_bd_cells processing_system7_0]
+endgroup
+save_bd_design
+generate_target all [get_files  E:/AX7010/labs/vdma_test_to_flash/vdma_test.srcs/sources_1/bd/system/system.bd]
+export_ip_user_files -of_objects [get_files E:/AX7010/labs/vdma_test_to_flash/vdma_test.srcs/sources_1/bd/system/system.bd] -no_script -force -quiet
+export_simulation -of_objects [get_files E:/AX7010/labs/vdma_test_to_flash/vdma_test.srcs/sources_1/bd/system/system.bd] -directory E:/AX7010/labs/vdma_test_to_flash/vdma_test.ip_user_files/sim_scripts -force -quiet
+make_wrapper -files [get_files E:/AX7010/labs/vdma_test_to_flash/vdma_test.srcs/sources_1/bd/system/system.bd] -top
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+file copy -force E:/AX7010/labs/vdma_test_to_flash/vdma_test.runs/impl_1/system_wrapper.sysdef E:/AX7010/labs/vdma_test_to_flash/vdma_test.sdk/system_wrapper.hdf
+
+launch_sdk -workspace E:/AX7010/labs/vdma_test_to_flash/vdma_test.sdk -hwspec E:/AX7010/labs/vdma_test_to_flash/vdma_test.sdk/system_wrapper.hdf

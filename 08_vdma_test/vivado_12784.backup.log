@@ -1,0 +1,184 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Fri Nov 04 10:04:51 2016
+# Process ID: 12784
+# Current directory: E:/AX7010/labs/vdma_test
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9984 E:\AX7010\labs\vdma_test\vdma_test.xpr
+# Log file: E:/AX7010/labs/vdma_test/vivado.log
+# Journal file: E:/AX7010/labs/vdma_test\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/AX7010/labs/vdma_test/vdma_test.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/AX7010/labs/repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.4/data/ip'.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:10 . Memory (MB): peak = 878.148 ; gain = 201.441
+save_project_as linux_hw E:/AX7010/labs/linux_hw -force
+save_project_as: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 888.434 ; gain = 0.000
+open_bd_design {E:/AX7010/labs/linux_hw/linux_hw.srcs/sources_1/bd/system/system.bd}
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:axi_vdma:6.2 - axi_vdma_0
+Adding component instance block -- xilinx.com:ip:v_tc:6.1 - v_tc_0
+Adding component instance block -- xilinx.com:ip:v_axi4s_vid_out:4.0 - v_axi4s_vid_out_0
+Adding component instance block -- digilentinc.com:ip:axi_dynclk:1.0 - axi_dynclk_0
+Adding component instance block -- digilentinc.com:ip:rgb2dvi:1.2 - rgb2dvi_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - axis_subset_converter_0
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_processing_system7_0_140M
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_processing_system7_0_100M
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_1
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <system> from BD file <E:/AX7010/labs/linux_hw/linux_hw.srcs/sources_1/bd/system/system.bd>
+open_bd_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 969.059 ; gain = 78.371
+startgroup
+set_property -dict [list CONFIG.PCW_QSPI_PERIPHERAL_ENABLE {1} CONFIG.PCW_QSPI_QSPI_IO {MIO 1 .. 6} CONFIG.PCW_QSPI_GRP_SINGLE_SS_ENABLE {1} CONFIG.PCW_ENET0_PERIPHERAL_ENABLE {1} CONFIG.PCW_ENET0_ENET0_IO {MIO 16 .. 27} CONFIG.PCW_ENET0_GRP_MDIO_ENABLE {1} CONFIG.PCW_ENET0_GRP_MDIO_IO {MIO 52 .. 53} CONFIG.PCW_ENET0_RESET_ENABLE {1} CONFIG.PCW_ENET0_RESET_IO {MIO 46} CONFIG.PCW_SD0_PERIPHERAL_ENABLE {1} CONFIG.PCW_SD0_GRP_CD_ENABLE {1} CONFIG.PCW_SD0_GRP_CD_IO {MIO 47} CONFIG.PCW_USB0_PERIPHERAL_ENABLE {1} CONFIG.PCW_USB0_RESET_ENABLE {0} CONFIG.PCW_USB0_RESET_IO {MIO 47} CONFIG.PCW_I2C0_PERIPHERAL_ENABLE {1} CONFIG.PCW_I2C1_PERIPHERAL_ENABLE {1} CONFIG.PCW_GPIO_MIO_GPIO_ENABLE {1} CONFIG.PCW_GPIO_MIO_GPIO_IO {MIO} CONFIG.PCW_MIO_16_IOTYPE {HSTL 1.8V} CONFIG.PCW_MIO_16_SLEW {fast} CONFIG.PCW_MIO_17_IOTYPE {HSTL 1.8V} CONFIG.PCW_MIO_17_SLEW {fast} CONFIG.PCW_MIO_18_IOTYPE {HSTL 1.8V} CONFIG.PCW_MIO_18_SLEW {fast} CONFIG.PCW_MIO_19_IOTYPE {HSTL 1.8V} CONFIG.PCW_MIO_19_SLEW {fast} CONFIG.PCW_MIO_20_IOTYPE {HSTL 1.8V} CONFIG.PCW_MIO_20_SLEW {fast} CONFIG.PCW_MIO_21_IOTYPE {HSTL 1.8V} CONFIG.PCW_MIO_21_SLEW {fast} CONFIG.PCW_MIO_22_IOTYPE {HSTL 1.8V} CONFIG.PCW_MIO_22_SLEW {fast} CONFIG.PCW_MIO_23_IOTYPE {HSTL 1.8V} CONFIG.PCW_MIO_23_SLEW {fast} CONFIG.PCW_MIO_24_IOTYPE {HSTL 1.8V} CONFIG.PCW_MIO_24_SLEW {fast} CONFIG.PCW_MIO_25_IOTYPE {HSTL 1.8V} CONFIG.PCW_MIO_25_SLEW {fast} CONFIG.PCW_MIO_26_IOTYPE {HSTL 1.8V} CONFIG.PCW_MIO_26_SLEW {fast} CONFIG.PCW_MIO_27_IOTYPE {HSTL 1.8V} CONFIG.PCW_MIO_27_SLEW {fast} CONFIG.PCW_MIO_28_SLEW {fast} CONFIG.PCW_MIO_29_SLEW {fast} CONFIG.PCW_MIO_30_SLEW {fast} CONFIG.PCW_MIO_31_SLEW {fast} CONFIG.PCW_MIO_32_SLEW {fast} CONFIG.PCW_MIO_33_SLEW {fast} CONFIG.PCW_MIO_34_SLEW {fast} CONFIG.PCW_MIO_35_SLEW {fast} CONFIG.PCW_MIO_36_SLEW {fast} CONFIG.PCW_MIO_37_SLEW {fast} CONFIG.PCW_MIO_38_SLEW {fast} CONFIG.PCW_MIO_39_SLEW {fast} CONFIG.PCW_MIO_52_SLEW {fast} CONFIG.PCW_MIO_53_SLEW {fast}] [get_bd_cells processing_system7_0]
+endgroup
+startgroup
+create_bd_intf_port -mode Master -vlnv xilinx.com:interface:iic_rtl:1.0 IIC_0
+connect_bd_intf_net [get_bd_intf_pins processing_system7_0/IIC_0] [get_bd_intf_ports IIC_0]
+endgroup
+startgroup
+create_bd_intf_port -mode Master -vlnv xilinx.com:interface:iic_rtl:1.0 IIC_1
+connect_bd_intf_net [get_bd_intf_pins processing_system7_0/IIC_1] [get_bd_intf_ports IIC_1]
+endgroup
+set_property name HDMI [get_bd_intf_ports IIC_1]
+set_property name HDMI_DDC [get_bd_intf_ports HDMI]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_1
+endgroup
+set_property location {7 2233 605} [get_bd_cells axi_gpio_1]
+startgroup
+create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 GPIO
+connect_bd_intf_net [get_bd_intf_pins axi_gpio_1/GPIO] [get_bd_intf_ports GPIO]
+endgroup
+startgroup
+set_property -dict [list CONFIG.C_GPIO_WIDTH {4} CONFIG.C_ALL_OUTPUTS {1}] [get_bd_cells axi_gpio_1]
+endgroup
+set_property name axi_gpio_led [get_bd_cells axi_gpio_1]
+set_property name leds_4bits [get_bd_intf_ports GPIO]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_1
+endgroup
+set_property location {8 2506 765} [get_bd_cells axi_gpio_1]
+set_property name axi_gpio_btn [get_bd_cells axi_gpio_1]
+startgroup
+create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 GPIO
+connect_bd_intf_net [get_bd_intf_pins axi_gpio_btn/GPIO] [get_bd_intf_ports GPIO]
+endgroup
+set_property name btns_4bits [get_bd_intf_ports GPIO]
+startgroup
+set_property -dict [list CONFIG.C_GPIO_WIDTH {4} CONFIG.C_ALL_INPUTS {1}] [get_bd_cells axi_gpio_btn]
+endgroup
+set_property name axi_gpio_hdmi [get_bd_cells axi_gpio_0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" Clk "Auto" }  [get_bd_intf_pins axi_gpio_led/S_AXI]
+</axi_gpio_led/S_AXI/Reg> is being mapped into </processing_system7_0/Data> at <0x41210000 [ 64K ]>
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" Clk "Auto" }  [get_bd_intf_pins axi_gpio_btn/S_AXI]
+</axi_gpio_btn/S_AXI/Reg> is being mapped into </processing_system7_0/Data> at <0x41220000 [ 64K ]>
+endgroup
+save_bd_design
+Wrote  : <E:/AX7010/labs/linux_hw/linux_hw.srcs/sources_1/bd/system/system.bd> 
+generate_target all [get_files  E:/AX7010/labs/linux_hw/linux_hw.srcs/sources_1/bd/system/system.bd]
+INFO: [xilinx.com:ip:axi_vdma:6.2-16] /axi_vdma_0 
+                    All clocks connected to AXI VDMA are not identical, therefore configuring AXI-VDMA in ASYNC mode.
+Verilog Output written to : E:/AX7010/labs/linux_hw/linux_hw.srcs/sources_1/bd/system/hdl/system.v
+Verilog Output written to : E:/AX7010/labs/linux_hw/linux_hw.srcs/sources_1/bd/system/hdl/system_wrapper.v
+Wrote  : <E:/AX7010/labs/linux_hw/linux_hw.srcs/sources_1/bd/system/system.bd> 
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'system_processing_system7_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_processing_system7_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'system_processing_system7_0_0'...
+WARNING: [xilinx.com:ip:processing_system7:5.5-1] system_processing_system7_0_0: The Zynq BFM requires an AXI BFM license to run. Please ensure that you have purchased and setup the AXI BFM license prior to running simulation with this block. Please contact your Xilinx sales office for more information on purchasing this license
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'system_processing_system7_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'system_processing_system7_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'system_axi_vdma_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_axi_vdma_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'system_axi_vdma_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'system_axi_vdma_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_vdma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_tc_0 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'system_v_axi4s_vid_out_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_v_axi4s_vid_out_0_0'...
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'system_v_axi4s_vid_out_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Test Bench' target for IP 'system_v_axi4s_vid_out_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'system_v_axi4s_vid_out_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_axi4s_vid_out_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dynclk_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb2dvi_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_hdmi .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'system_axis_subset_converter_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_axis_subset_converter_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'system_axis_subset_converter_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'system_axis_subset_converter_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_subset_converter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'system_rst_processing_system7_0_140M_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_rst_processing_system7_0_140M_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'system_rst_processing_system7_0_140M_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'system_rst_processing_system7_0_140M_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'system_rst_processing_system7_0_140M_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_processing_system7_0_140M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_processing_system7_0_100M .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'system_xbar_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_xbar_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'system_xbar_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'system_xbar_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_1 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'system_axi_gpio_1_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_axi_gpio_1_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'system_axi_gpio_1_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'system_axi_gpio_1_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'system_axi_gpio_1_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_led .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'system_axi_gpio_1_1'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_axi_gpio_1_1'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'system_axi_gpio_1_1'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'system_axi_gpio_1_1'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'system_axi_gpio_1_1'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_btn .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'system_auto_pc_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_auto_pc_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'system_auto_pc_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'system_auto_pc_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_pc .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'system_auto_pc_1'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_auto_pc_1'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'system_auto_pc_1'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'system_auto_pc_1'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file E:/AX7010/labs/linux_hw/linux_hw.srcs/sources_1/bd/system/hw_handoff/system.hwh
+Generated Block Design Tcl file E:/AX7010/labs/linux_hw/linux_hw.srcs/sources_1/bd/system/hw_handoff/system_bd.tcl
+Generated Hardware Definition File E:/AX7010/labs/linux_hw/linux_hw.srcs/sources_1/bd/system/hdl/system.hwdef
+generate_target: Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 1225.902 ; gain = 133.496
+export_ip_user_files -of_objects [get_files E:/AX7010/labs/linux_hw/linux_hw.srcs/sources_1/bd/system/system.bd] -no_script -force -quiet
+export_simulation -of_objects [get_files E:/AX7010/labs/linux_hw/linux_hw.srcs/sources_1/bd/system/system.bd] -directory E:/AX7010/labs/linux_hw/linux_hw.ip_user_files/sim_scripts -force -quiet
+make_wrapper -files [get_files E:/AX7010/labs/linux_hw/linux_hw.srcs/sources_1/bd/system/system.bd] -top
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Fri Nov 04 10:23:43 2016] Launched synth_1...
+Run output will be captured here: E:/AX7010/labs/linux_hw/linux_hw.runs/synth_1/runme.log
+[Fri Nov 04 10:23:43 2016] Launched impl_1...
+Run output will be captured here: E:/AX7010/labs/linux_hw/linux_hw.runs/impl_1/runme.log
+file copy -force E:/AX7010/labs/linux_hw/linux_hw.runs/impl_1/system_wrapper.sysdef E:/AX7010/labs/linux_hw/linux_hw.sdk/system_wrapper.hdf
+
+launch_sdk -workspace E:/AX7010/labs/linux_hw/linux_hw.sdk -hwspec E:/AX7010/labs/linux_hw/linux_hw.sdk/system_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace E:/AX7010/labs/linux_hw/linux_hw.sdk -hwspec E:/AX7010/labs/linux_hw/linux_hw.sdk/system_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+launch_sdk -workspace E:/AX7010/labs/linux_hw/linux_hw.sdk -hwspec E:/AX7010/labs/linux_hw/linux_hw.sdk/system_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace E:/AX7010/labs/linux_hw/linux_hw.sdk -hwspec E:/AX7010/labs/linux_hw/linux_hw.sdk/system_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 04 16:42:13 2016...
